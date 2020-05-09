@@ -1,5 +1,6 @@
 import 'package:floard/models/gridview_entity.dart';
 import 'package:floard/pages/interface/banner_gallery.dart';
+import 'package:floard/pages/interface/bottom_sheet.dart';
 import 'package:floard/pages/interface/dropdown_menu.dart';
 import 'package:floard/pages/interface/dropdown_refresh.dart';
 import 'package:floard/pages/interface/index_list.dart';
@@ -33,10 +34,10 @@ class GridViewSource {
     ),
     GridViewEntity(
       header: "其他",
-      titles: ["加载hud", "下拉菜单"],
-      subs: ["支持加载和提示", "仿美团下拉筛选"],
-      images: ["statistic/interface3", "statistic/interface6"],
-      pages: [LoadingHud(), DropDownMenuPage()]
+      titles: ["加载hud", "下拉菜单", "底部菜单"],
+      subs: ["支持加载和提示", "仿美团下拉筛选", "sheet风格菜单"],
+      images: ["statistic/interface3", "statistic/interface6", "statistic/interface6"],
+      pages: [LoadingHud(), DropDownMenuPage(), BottomSheet()]
     )
   ];
 

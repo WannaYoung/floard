@@ -43,16 +43,21 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return FlutterEasyLoading(
-        child: CupertinoApp(
+      child: CupertinoApp(
       title: "ATF",
       home: TabBarPage(),
       theme: CupertinoThemeData(
         brightness: Brightness.light,
         primaryColor: Colors.white,
       ),
-      localizationsDelegates: [RefreshLocalizations.delegate],
-      supportedLocales: [const Locale("zh")],
-      locale: const Locale("zh"),
+      localizationsDelegates: [
+        RefreshLocalizations.delegate,
+        DefaultMaterialLocalizations.delegate,
+        DefaultCupertinoLocalizations.delegate,
+        DefaultWidgetsLocalizations.delegate
+      ],
+      supportedLocales: [const Locale("zh", "CN"), const Locale("en", "US")],
+      locale: const Locale("en", "zh"),
     ));
   }
 }

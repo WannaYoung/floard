@@ -1,7 +1,10 @@
+import 'package:floard/pages/interface/loading_hud.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:floard/styles/resources.dart';
+import 'package:flutter_show_more/flutter_show_more.dart';
 import 'package:gzx_dropdown_menu/gzx_dropdown_menu.dart';
+import 'package:modal_bottom_sheet/modal_bottom_sheet.dart';
 
 class SortCondition {
   String name;
@@ -81,7 +84,8 @@ class DropDownMenuPageState extends State<DropDownMenuPage> {
                 controller: _dropdownMenuController,
                 // 当点击头部项的事件，在这里可以进行页面跳转或openEndDrawer
                 onItemTap: (index) {
-                  if (index == 3) {}
+                  if (index == 3) {
+                  }
                 },
                 height: 50,
                 borderWidth: 0.5,

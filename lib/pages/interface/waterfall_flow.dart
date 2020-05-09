@@ -1,3 +1,6 @@
+import 'package:floard/models/waterfall_entity.dart';
+import 'package:floard/pages/interface/waterflow_item.dart';
+import 'package:floard/source/waterfall_source.dart';
 import 'package:floard/styles/colors.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -27,17 +30,10 @@ class WaterFallPageState extends State<WaterFallPage> {
         child: StaggeredGridView.countBuilder(
           padding: EdgeInsets.all(15),
           crossAxisCount: 4,
-          itemCount: 20,
-          itemBuilder: (BuildContext context, int index) => new Container(
-              color: Colors.green,
-              child: new Center(
-                child: new CircleAvatar(
-                  backgroundColor: Colors.white,
-                  child: new Text('$index'),
-                ),
-              )),
+          itemCount: WaterfallSource.waterfallItems.length,
+          itemBuilder: (BuildContext context, int index) => WaterfallItem(waterfallEntity: WaterfallSource.waterfallItems[index]),
           staggeredTileBuilder: (int index) =>
-              new StaggeredTile.count(2, index.isEven ? 2 : 1),
+              StaggeredTile.fit(2),
           mainAxisSpacing: 10.0,
           crossAxisSpacing: 10.0,
         ));
